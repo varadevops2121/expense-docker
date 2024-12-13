@@ -7,4 +7,4 @@ WORKDIR /opt/server
 COPY pacage.json .
 COPY *.js .
 RUN npm install 
-CMP ["node" ,"index.js"]
+CMD ["node" ,"index.js"]
