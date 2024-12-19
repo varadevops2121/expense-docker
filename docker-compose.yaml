@@ -4,8 +4,8 @@ name: expense
 networks:
   default:
     name: expense
-# volumes:
-#   mysql:
+volumes:
+  mysql:
     #external: true # if true, you need to create manually
        # docker volume create myqsl
 services:
