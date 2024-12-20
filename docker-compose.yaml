@@ -1,5 +1,5 @@
-
 #version: '3.8'
+
 name: expense
 networks:
   default:
@@ -11,7 +11,8 @@ volumes:
 services:
   mysql:
     #image: mysql:v1.0
-    image: varadevops2121/mysql:v1.0
+    #image: varadevops2121/mysql:v1.0
+    image: varadevops2121/mysql
     container_name: mysql # --name mysql
     environment:
       - MYSQL_ROOT_PASSWORD=ExpenseApp@1
@@ -24,7 +25,8 @@ services:
       type: volume # -v volume-name:/path/in/container
   backend:
     #image: backend:v1.0
-    image: varadevops2121/backend:v1.0
+    #image: varadevops2121/backend:v1.0
+    image: varadevops2121/backend
     container_name: backend
     command: sh -c "sleep 20 && node /opt/server/index.js"
     depends_on: 
